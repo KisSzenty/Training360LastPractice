@@ -1,9 +1,12 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const DB = require('../modules/database');
+const db = new DB();
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+router.get('/', async (_req, res, _next) => {
+  const users = await db.read();
+  res.render('users', { users: users });
 });
 
 module.exports = router;
