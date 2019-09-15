@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FilterPipe implements PipeTransform {
 
-  transform(value: any, searchText: string) {
+  transform(value: any, searchText: string, changeCounter) {
     return value.filter(item => item.name.indexOf(searchText) > -1);
   }
 

@@ -1,1 +1,29 @@
-<p>update-member works!</p>
+<h1> Member szerkesztése</h1>
+<form class="form"
+      (submit)="onUpdate()">
+    <label for="name">Name</label>
+    <input class="form-control"
+           type="text"
+           name="name"
+           placeholder="Name"
+           [(ngModel)]="editMemeber.name">
+    <label for="skills">Skills</label>
+    <input class="form-control"
+           type="text"
+           name="skills"
+           placeholder="skill type"
+           [(ngModel)]="editMemeber.skills">
+    <label for="email">E-mail</label>
+    <input class="form-control"
+           type="text"
+           name="email"
+           placeholder="E-mail"
+           [(ngModel)]="editMemeber.email">
+    <label for="pass">Password</label>
+    <input class="form-control"
+           type="text"
+           name="pass"
+           placeholder="Password"
+           [(ngModel)]="editMemeber.password">
+    <button class="btn btn-info">Member szerkesztése</button>
+</form>

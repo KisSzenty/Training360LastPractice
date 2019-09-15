@@ -20,8 +20,7 @@ export class MembersComponent {
   }
 
   onDelete(id: number): void {
-    this.us.delete(id).forEach(data => console.log(data));
-    this.changeCounter += 1;
+    this.us.delete(id).forEach(data => location.reload());
   }
 
 }

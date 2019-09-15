@@ -1,6 +1,29 @@
 <h1> Új member hozzáadása</h1>
-<form>
+<form class="form"
+      (submit)="onCreate()">
     <label for="name">Name</label>
-    <input type="text"
-           name="name">
+    <input class="form-control"
+           type="text"
+           name="name"
+           placeholder="Name"
+           [(ngModel)]="newMember.name">
+    <label for="skills">Skills</label>
+    <input class="form-control"
+           type="text"
+           name="skills"
+           placeholder="skill type"
+           [(ngModel)]="newMember.skills">
+    <label for="email">E-mail</label>
+    <input class="form-control"
+           type="text"
+           name="email"
+           placeholder="E-mail"
+           [(ngModel)]="newMember.email">
+    <label for="pass">Password</label>
+    <input class="form-control"
+           type="text"
+           name="pass"
+           placeholder="Password"
+           [(ngModel)]="newMember.password">
+    <button class="btn btn-info">Új member hozzáadása</button>
 </form>
